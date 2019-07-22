@@ -1,0 +1,34 @@
+1->
+1)Camera, Pictures, Image
+2)battery, power
+3)Display, resolution
+4)Storage
+5)
+
+2->
+1)Camera, Pictures, Image
+2)battery, power
+3)Display, resolution
+4)Storage
+5)price
+
+3->
+1)Camera, Pictures, Image
+2)battery, power
+3)Display, resolution
+4)Storage
+5)price, money
+
+4->
+1)Camera, Pictures, Image
+2)battery, power
+3)
+4)Storage
+5)
+
+5->
+1)Camera, Pictures, Image
+2)battery, power
+3)Display, resolution
+4)Storage
+5)
