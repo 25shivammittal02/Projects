@@ -1,0 +1,84 @@
+DATA INSERTION
+
+insert into Train values (12955, 'BCT_JP Express');
+insert into Train values (12925, 'Paschim Express');
+insert into Train values (12472, 'Swaraj Express');
+insert into Train values (12951, 'Mumbai Rajdhani');
+
+
+insert into Station values('UMB', 'Ambala Junction');
+insert into Station values('PTA', 'Patiala Junction');
+insert into Station values('NDLS', 'New Delhi');
+insert into Station values('DLI', 'Old Delhi');
+insert into Station values('KOTA', 'Kota');
+insert into Station values('BCT', 'Mumbai Central');
+insert into Station values('JP', 'Jaipur');
+insert into Station values('BSB', 'Varanasi');
+insert into Station values('BDTS', 'Bandra Termius');
+
+insert into Coach values('B1', '3A');
+insert into Coach values('B2', '3A');
+insert into Coach values('B3', '3A');
+insert into Coach values('B4', '3A');
+insert into Coach values('B5', '3A');
+insert into Coach values('B6', '3A');
+insert into Coach values('B7', '3A');
+insert into Coach values('B8', '3A');
+insert into Coach values('B9', '3A');
+insert into Coach values('B10', '3A');
+insert into Coach values('B11', '3A');
+insert into Coach values('B12', '3A');
+insert into Coach values('B13', '3A');
+insert into Coach values('A1', '2A');
+insert into Coach values('A2', '2A');
+insert into Coach values('A3', '2A');
+insert into Coach values('A4', '2A');
+insert into Coach values('A5', '2A');
+insert into Coach values('A6', '2A');
+insert into Coach values('A7', '2A');
+insert into Coach values('A8', '2A');
+insert into Coach values('A9', '2A');
+insert into Coach values('A10', '2A');
+insert into Coach values('A11', '2A');
+insert into Coach values('A12', '2A');
+insert into Coach values('A13', '2A');
+insert into Coach values('H1', '1A');
+insert into Coach values('H3', '1A');
+insert into Coach values('H4', '1A');
+insert into Coach values('H5', '1A');
+insert into Coach values('H6', '1A');
+
+insert into Userm values('harmanpreet@gmail.com', 'qwerty', 'harman', 'singh');
+insert into Userm values('kirat@gmail.com', 'asdfgh', 'kirat', 'jain');
+insert into Userm values('utkarsh@gmail.com', 'dfghfgh', 'utkarsh', 'khan');
+insert into Userm values('siddhu@gmail.com', 'sdfgdfgh', 'siddhu', 'ahluwalia');
+insert into Userm values('prashil@gmail.com', 'mnbvcvbj', 'prashil', 'gupta');
+insert into Userm values('david@gmail.com', 'wefghnjh' ,'david', 'chadda');
+insert into Userm values('martin@gmail.com', 'srtfghg' ,'martin', 'girish');
+
+
+insert into Booking_Details values(1, 12955, 'abhishek', 'M', 24, 'SL', 'NDLS', 'KOTA');
+insert into Booking_Details values(2, 12925, 'pranjay', 'M', 21, 'UB', 'UMB', 'PTA');
+insert into Booking_Details values(3, 12472, 'surbhit', 'M', 22, 'MB', 'BCT', 'DLI');
+insert into Booking_Details values(4, 12951, 'siddhant', 'M', 18, 'LB', 'JP', 'BDTS');
+insert into Booking_Details values(5, 12472, 'aayushi', 'F', 19, 'SU', 'NDLS', 'UMB');
+insert into Booking_Details values(6, 12955, 'chetna', 'F', 24, 'SL', 'KOTA', 'BSB');
+insert into Booking_Details values(7, 12951, 'shivang', 'M', 26, 'LB', 'BDTS', 'DLI');
+
+
+insert into Ticket values(8964598645, 'CNF');
+insert into Ticket values(7845454544, 'CNF');
+insert into Ticket values(5485252321, 'CNF');
+insert into Ticket values(2154585578, 'CNF');
+insert into Ticket values(7985452587, 'CNF');
+insert into Ticket values(2345678765, 'CNF');
+insert into Ticket values(9876543456, 'CNF');
+
+
+insert into Seats values(8964598645, 1, 'A2', 12, 'SL');
+insert into Seats values(7845454544, 2, 'B5', 10, 'UB');
+insert into Seats values(5485252321, 3, 'H1', 34, 'SL');
+insert into Seats values(2154585578, 4, 'A6', 8, 'SU');
+insert into Seats values(7985452587, 5, 'B2', 56, 'LB');
+insert into Seats values(2345678765, 6, 'A1', 89, 'MB');
+insert into Seats values(9876543456, 7, 'H3', 76, 'UB');

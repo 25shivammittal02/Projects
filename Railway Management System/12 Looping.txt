@@ -1,0 +1,14 @@
+Looping:
+
+Use pl/sql loop statement to show names of all passengers having serial number between 1,4 inclusive.
+
+Code:
+set serveroutput on;
+DECLARE
+  name Booking_Details.P_name%type;
+BEGIN
+  for i in 1..4 loop
+    select P_name into name from Booking_Details where Sno = i;
+    dbms_output.put_line('name is = '||name);
+  end loop;
+END;

@@ -1,0 +1,39 @@
+create table Train ( 		T_no 		number(6) 	primary key, 
+				T_name 		varchar2(100) 	not null);			
+
+
+creat table Station ( 		S_code 		Varchar2 (4) 	Primary Key, 
+				S_name 		varchar2(50) 	not null);
+
+
+create table Coach( 		C_no 		varchar(4) 	primary key, 
+				C_type 		Varchar2(6) 	not null );
+
+creat table User (		U_email 	Varchar2 (100)	Primary Key,
+				U_pass 		Varchar2 (16)	not null,
+				U_Fn 		Varchar2 (50)	not null,
+				U_Ln 		Varchar2 (50)	not null,
+				U_mob 		number (11)	unique,
+				U_add 		Varchar2 (500)	not null,
+				U_DOB 		Date		not null);
+
+
+create table Booking_Details ( 	Sno 		number (3)	Artificial Key,
+				T_no 		number (6)	Foreign key,
+				P_name 		Varchar2 (100)	not null,
+				P_gender	Varchar2 (1)	not null,
+				P_age 		number(3)	not null,
+				P_Berth, 	Varchar2 (2)	
+				B_Station 	Varchar2 (5)	references Station(S_code),
+				D_Station 	Varchar2 (5)	references Station(S_code));
+
+
+create table Ticket ( 		PNR 		number(15)	Primary Key,
+				Status 		Varchar2 (3)	not null);
+
+
+create table Seats ( 		PNR 		number(15)	references Ticket(PNR),
+				P_name 		Varchar2 (100)	references Booking_Details(P_name)
+				C_no 		Varchar2 (3)	references Coach(C_no)
+				S_no 		number(3)	not null
+				A_Berth 	Varchar2 (2)	not null);

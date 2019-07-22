@@ -1,0 +1,18 @@
+Use pl/sql cursor to display name of all doctors of even sequence no.
+
+Code:
+DECLARE
+  cursor c1 is select * from Booking_Details ;
+BEGIN
+  for Booking_Details  in c1 loop
+    if Booking_Details.Sno in (2,4,6,8,10) then
+      dbms_output.put_line('Name is = '||Booking_Details.P_name);
+    end if;
+  end loop;
+END;
+
+Output:
+Name is = pranjay 
+Name is = siddhant 
+Name is = chetna 
+Name is = qwerty

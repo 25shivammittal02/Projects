@@ -1,0 +1,18 @@
+delete Booking_Details details:
+
+set serveroutput on;
+
+declare
+x1 Booking_Details%rowtype;
+cursor c1 is select * from Booking_Details where p_name='&passenger_name';
+
+begin
+open c1;
+loop
+fetch c1 into x1;
+exit when c1%notfound;
+delete from Booking_Details where p_name=x1.p_name;
+dbms_output.put_line('record deleted for p_name ' || x1.p_name);
+end loop;
+close c1;
+end;

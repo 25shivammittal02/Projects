@@ -1,0 +1,7 @@
+A trigger on User table that prints a message whenever password of any user is updated;
+
+Code:
+CREATE OR REPLACE TRIGGER passwd_trig after update or delete of U_pass on Userm for each row
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('You have successfully changed your password');
+END;

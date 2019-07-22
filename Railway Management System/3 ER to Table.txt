@@ -1,0 +1,55 @@
+Train
+
+T_no ->  Primary Key, number(6)
+T_name -> not null, Varchar2 (100)
+
+
+Station
+
+S_code ->  Primary Key, Varchar2 (5)
+S_name -> not null, Varchar2 (50)
+
+
+Coach
+
+C_no -> Primary Key, Varchar2 (3)
+C_type -> not null, Varchar2 (2)
+
+
+
+User
+
+U_email -> Primary Key, Varchar2 (100)
+U_pass -> not null , Varchar2 (16)
+U_Fn -> not null, Varchar2 (50)
+U_Ln -> not null, Varchar2 (50)
+U_mob -> unique, number (11)
+U_add -> not null, Varchar2 (500)
+U_DOB -> not null, Date
+
+
+Booking_Details
+
+Sno -> Artificial key, number (3)
+T_no ->  Foreign Key, number(6)
+P_name -> not null, Varchar2 (100)
+P_gender -> not null, Varchar2 (1)
+P_age -> not null, number(3)
+P_Berth, Varchar2 (2)
+B_Station -> Foreign Key, Varchar2 (5)
+D_Station -> Foreign Key, Varchar2 (5)
+
+
+Ticket
+
+PNR ->  Primary Key, number(15)
+Status -> not null, Varchar2 (3)
+
+
+Seats
+
+PNR ->  Primary Key, number(15)
+P_name -> not null, Varchar2 (100)
+C_no -> not null, Varchar2 (3)
+S_no -> not null, number(3)
+A_Berth -> not null, Varchar2 (2)

@@ -1,0 +1,31 @@
+create or replace procedure new_Passenger(
+	Sno Booking_details.Sno%type,
+	T_no Booking_details.T_no%type, 
+	P_name Booking_details.P_name%type,
+	P_gender Booking_details.P_gender%type,
+	P_age Booking_details.P_age%type,
+	P_Berth Booking_details.P_Berth%type,
+	B_Station Booking_details.B_Station%type,
+	D_Station Booking_details.D_Station%type)
+is
+
+begin
+insert into Booking_details (Sno, T_no, P_name, P_gender, P_age, P_Berth, B_Station, D_Station   )
+values (Sno, T_no, P_name, P_gender, P_age, P_Berth, B_Station, D_Station);
+
+commit;
+end;
+ 
+begin
+
+new_Passenger(Sno => &Serial_no,
+T_no => &Train_no,
+P_name =>'&Name',
+P_gender => '&Gender',
+P_age => &age,
+P_Berth => '&Preferred_Berth',
+B_Station => '&Boarding_Station',
+D_Station => '&Destination_Station');
+
+END;
+

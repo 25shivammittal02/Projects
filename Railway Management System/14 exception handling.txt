@@ -1,0 +1,17 @@
+Create a user defined exception , raise it and handle it using pl/sql construct.
+
+Code:	
+DECLARE
+  trainno number;
+  no number;
+  T_no_out_of_database exception ;
+BEGIN
+  no := &train_no;
+  select T_no into trainno from train where T_no = no;
+  if trainno not in (12955, 12925, 12472, 12951) then
+    raise T_no_out_of_database;
+  end if;
+EXCEPTION
+   when T_no_out_of_database then
+   dbms_output.put_line ('Train not found, please enter valid train number !');
+end;

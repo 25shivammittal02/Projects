@@ -1,0 +1,16 @@
+PL/SQL code with procedure 1: to update password
+
+set serveroutput on;
+
+declare
+email Varchar2(100);
+procedure passwd_update(email in Varchar2)
+as
+begin
+update Userm set U_pass='&new_password' where U_email=email;
+end;
+
+begin
+email:='&User_email';
+passwd_update(email);
+end;
